@@ -4,7 +4,7 @@ import sys
 
 NUM_ARGS = 4
 
-if len(sys.argv)!= NUM_ARGS:
+if len(sys.argv) != NUM_ARGS:
 	sys.exit("Usage: python3 calculadora.py operacion operando1 operando2")
 
 _, operacion, operando1, operando2 = sys.argv
@@ -16,14 +16,14 @@ except ValueError:
 
 if operacion == 'suma':
 	print(operando1 + operando2)
-elif operacion == 'resta' :
+elif operacion == 'resta':
 	print(operando1 - operando2)
-elif operacion == 'multiplicacion' :
+elif operacion == 'multiplicacion':
 	print(operando1 * operando2)
-elif operacion == 'division' :
+elif operacion == 'division':
 	try:
 		print(operando1 / operando2)
 	except ZeroDivisionError:
 		print("No se puede dividir entre 0")
 else:
-	print("Introduce una operacion del tipo: suma, resta, multiplicacion, division")
+	print("Introduce una operacion: suma, resta, multiplicacion, division")
